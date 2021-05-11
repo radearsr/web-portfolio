@@ -220,14 +220,28 @@ body {
 .btn-kirim {
   margin-top: 10px;
   padding: 15px;
-  width: 100px;
+  width: 200px;
   font-size: 20px;
   display: block;
   border-radius: 5px;
   border: none;
   background-color: rgba(126, 110, 38, 0.829);
   color: #fff;
-  opacity: 0.7;
+  opacity: 0.8;
+  transition: all 1s;
+}
+
+.btn-loading {
+  margin-top: 10px;
+  padding: 15px;
+  width: 200px;
+  font-size: 20px;
+  display: block;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(126, 110, 38, 0.527);
+  color: #fff;
+  opacity: 0.6;
   transition: all 1s;
 }
 
@@ -235,8 +249,59 @@ body {
   opacity: 1;
 }
 
+.alert {
+  width: 500px;
+  height: 30px;
+  background-color: #055f05;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px 0 10px 0;
+}
+
+.alert-error {
+  width: 500px;
+  height: 30px;
+  background-color: #b12c2c;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px 0 10px 0;
+}
+
+.d-none {
+  display: none;
+}
+
+/* Spinner */
+.lds-dual-ring {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* Footer */
 footer {
+  margin-top: 30px;
   background-color: #5e4520;
   width: 100%;
   height: 100px;
@@ -308,6 +373,11 @@ footer p a {
     padding: 12px;
     font-size: 14px;
     margin-bottom: 20px;
+  }
+  .alert {
+    width: 95%;
+    height: 40px;
+    margin-bottom: 10px;
   }
 }
 

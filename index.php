@@ -98,15 +98,19 @@ ON data_project.id_link_download = link_download.id_download
         <div class="feedback">
             <h1 class="section-title">Feedback</h1>
             <div class="input-area">
-                <form action="" method="post">
+                <div class="alert d-none"><strong>Terima Kasih!!</strong> Pesan anda sudah kami terima</div>
+                <div class="alert-error d-none"><strong>Maaf...</strong> Pesan anda tidak terkirim!</div>
+                <form name="form-feedback">
                     <label class="label-input" for="in-name">Nama Lengkap</label>
                     <input class="form-input" type="text" name="nama" id="in-name" required />
                     <label class="label-input" for="in-email">Gmail / Email</label>
                     <input class="form-input" type="text" name="email" id="in-email" required />
                     <label class="label-input" for="in-pesan">Pesan</label>
-                    <textarea class="form-input" name="pesan" id="in-pesan" cols="30" rows="3" required>
-            </textarea>
+                    <textarea class="form-input" name="pesan" id="in-pesan" cols="30" rows="3" required></textarea>
                     <button class="btn-kirim" type="submit">Kirim</button>
+                    <button class="btn-loading d-none" type="button" disabled>Kirim
+                        <div class="lds-dual-ring"></div>
+                    </button>
                 </form>
             </div>
         </div>
@@ -122,12 +126,7 @@ ON data_project.id_link_download = link_download.id_download
     </footer>
     <!-- Akhir Footer -->
 </body>
-<script>
-const nav = document.querySelector(".navbar ul");
-const btn = document.querySelector(".icon-bars");
-btn.addEventListener("click", () => {
-    nav.classList.toggle("menu-show");
-});
-</script>
+
+<script src="assets/js/script.js"></script>
 
 </html>
