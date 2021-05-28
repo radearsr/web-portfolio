@@ -1,138 +1,184 @@
-@import url("https://fonts.googleapis.com/css2?family=Girassol&family=Montserrat&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
 
-/* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-}
-
-/* Navbar */
-.navbar {
+.container {
   width: 100%;
-  float: left;
-  background-color: #ff9700;
-  color: #fff;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* ============== Section ============= */
+section {
+  padding: 15px 0;
+}
+
+/* ============== Navbar ============== */
+.navbar {
+  background-color: #0d6efd;
+  color: rgb(255, 255, 255);
   position: fixed;
+  width: 100%;
   top: 0;
   z-index: 10;
 }
 
-.navbar .nav-logo {
-  font-size: 26px;
-  padding: 6px;
+.nav-left {
   float: left;
+  font-size: 18px;
+  padding: 10px 0;
 }
 
-.nav-logo {
-  margin-right: 60%;
-  margin-top: 3px;
-  font-family: "Girassol", cursive;
+.nav-right {
+  float: right;
 }
 
-.navbar li {
-  list-style: none;
+.nav-right li {
+  float: left;
+  font-size: 18px;
 }
 
 .navbar a {
-  color: #fff;
   text-decoration: none;
+  padding: 15px 10px;
+  color: #fff;
+  display: block;
+}
+
+.list-menu span {
+  margin-right: 5px;
+}
+
+.list-menu:hover {
+  background-color: rgba(255, 255, 255, 0.397);
 }
 
 .icon-bars {
-  opacity: 0.8;
-  transition: all 1s;
-}
-
-.icon-bars:active {
-  opacity: 1;
-}
-
-.navbar ul li a {
-  font-size: 18px;
-  display: block;
-  float: left;
-  padding: 20px 20px;
-  opacity: 0.7;
-  transition: all 1s;
-}
-
-.navbar ul li a.active {
-  opacity: 1;
-}
-
-.navbar ul li a.list-menu:hover {
-  opacity: 1;
-  background-color: rgba(250, 250, 250, 0.616);
-}
-
-.navbar div.icon-bars {
   display: none;
-  color: #fff;
-}
-.navbar ul li a span {
-  margin-right: 10px;
+  padding: 10px;
 }
 
-.fa-bars {
-  font-size: 30px;
-}
-
-/* Jumbotron */
+/* ============== Jumbotron ============== */
 .jumbotron {
   height: 100vh;
-  padding-top: 150px;
   text-align: center;
 }
 
-.jumbotron img {
+.profile {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.profile h1 {
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
+.profile p {
+  font-size: 24px;
+}
+
+.img-rounded {
   border-radius: 360px;
 }
 
-.profile-info {
-  padding-top: 20px;
-  font-size: 35px;
-  font-weight: normal;
-}
-
-.jumbotron p {
-  font-size: 20px;
-}
-
-/* Project */
-.myproject {
-  padding: 60px 15px;
+.btn-start {
+  width: 200px;
+  font-size: 18px;
+  font-weight: bold;
   text-align: center;
-  margin-bottom: 500px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 20px;
+  margin-top: 20%;
+  border-radius: 30px;
+  border: 2px solid blue;
+  color: black;
 }
 
-.content-items {
-  width: 25%;
+.btn-start:hover {
+  background-color: blue;
+  color: #fff;
+}
+
+/* ============== MyProjects ============== */
+.project {
+  text-align: center;
+}
+
+.heading {
+  font-size: 24px;
+  padding: 40px;
+}
+.clear {
+  clear: left;
+}
+.content-item {
   float: left;
-  margin-bottom: 30px;
+  width: 25%;
+  padding: 20px 10px 20px 10px;
 }
 
-.section-title {
-  font-size: 30px;
-  letter-spacing: 1px;
-  margin-bottom: 30px;
-  text-align: center;
+/* =============Search Box============== */
+.search-area {
+  width: 500px;
+  height: 40px;
+  position: relative;
+  border-radius: 22px;
+  border: 1px solid rgb(86, 86, 88);
+  transition: all 0.8s;
+  margin: 20px auto;
+  box-shadow: 1px 3px 5px rgb(58, 57, 57);
 }
 
-/* Card */
+.table-search {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-search {
+  border-radius: 20px;
+  width: 100%;
+  font-size: 16px;
+  border: none;
+  height: 34px;
+  background-color: rgb(3, 3, 255);
+  color: rgb(255, 255, 255);
+  opacity: 0.7;
+}
+
+.btn-search:hover {
+  opacity: 1;
+}
+
+.in-search {
+  padding: 6px 10px;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 20px;
+  border: none;
+}
+
+.in-search:focus {
+  outline: none;
+}
+
+/* ============== Card ============== */
 .card a {
   text-decoration: none;
 }
 .card {
-  width: 330px;
-  height: 550px;
+  width: 100%;
+  height: 600px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   z-index: 0;
@@ -193,87 +239,93 @@ body {
   background-color: rgb(90, 207, 100);
 }
 
-/* Feedback */
+/* ============== Alert ============== */
+.alert {
+  width: 60%;
+  height: 50px;
+  margin: 10px auto;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #eaeaea;
+}
+.alert-success {
+  background-color: #419e55;
+}
+.alert-error {
+  background-color: #d34a4a;
+}
+
+/* ============== Feedback ============== */
 .feedback {
-  padding-top: 150px;
+  text-align: center;
+}
+.row {
+  display: block;
+  margin: 20px;
 }
 
 .input-area {
-  padding: 10px 10px 50px 100px;
+  padding: 40px 0 100px 30px;
+  text-align: left;
 }
 
 .label-input {
-  display: block;
-  font-weight: bold;
-  font-size: 18px;
-  margin: 10px 0;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-right: 10px;
+  font-size: 20px;
 }
 
 .form-input {
-  width: 600px;
-  padding: 7px;
-  font-size: 20px;
-  border: 2px solid rgba(207, 202, 192, 0.651);
+  border: 2px solid rgb(152, 152, 156);
+  padding: 12px;
   border-radius: 5px;
+  width: 50%;
+  font-size: 20px;
+  outline: none;
+  opacity: 0.7;
+  transition: all 0.5s;
+}
+textarea {
+  vertical-align: top;
+  resize: none;
 }
 
 .btn-kirim {
-  margin-top: 10px;
-  padding: 15px;
-  width: 200px;
-  font-size: 20px;
-  display: block;
-  border-radius: 5px;
+  padding: 16px;
+  width: 10%;
+  font-size: 18px;
+  margin-left: 50px;
   border: none;
-  background-color: rgba(126, 110, 38, 0.829);
-  color: #fff;
-  opacity: 0.8;
-  transition: all 1s;
+  border-radius: 4px;
+  color: rgb(255, 255, 255);
+  background-color: blue;
 }
 
 .btn-loading {
-  margin-top: 10px;
-  padding: 15px;
-  width: 200px;
-  font-size: 20px;
-  display: block;
-  border-radius: 5px;
+  padding: 16px;
+  width: 10%;
+  font-size: 18px;
+  margin-left: 50px;
   border: none;
-  background-color: rgba(126, 110, 38, 0.527);
-  color: #fff;
-  opacity: 0.6;
-  transition: all 1s;
+  border-radius: 4px;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 4, 255, 0.781);
+  opacity: 0.8;
 }
 
-.btn-kirim:hover {
+.form-input:focus {
+  border: 2px solid rgb(152, 152, 156);
+  box-shadow: 1px 2px 5px rgb(72, 106, 255);
   opacity: 1;
 }
 
-.alert {
-  width: 500px;
-  height: 30px;
-  background-color: #055f05;
-  color: #fff;
-  text-align: center;
-  font-size: 18px;
-  padding: 10px 0 10px 0;
-}
-
-.alert-error {
-  width: 500px;
-  height: 30px;
-  background-color: #b12c2c;
-  color: #fff;
-  text-align: center;
-  font-size: 18px;
-  padding: 10px 0 10px 0;
-}
-
+/* ============== Spinner ================ */
 .d-none {
   display: none;
 }
 
-/* Spinner */
 .lds-dual-ring {
   display: inline-block;
   width: 20px;
@@ -299,115 +351,54 @@ body {
   }
 }
 
-/* Footer */
+/* =================Footer================ */
 footer {
-  margin-top: 30px;
-  background-color: #5e4520;
-  width: 100%;
-  height: 100px;
+  background-color: #7b7485;
+  height: 150px;
   text-align: center;
-  font-size: 18px;
+  color: #faeaff;
+  vertical-align: bottom;
+}
+.sosmed {
+  padding: 15px;
+}
+.sosmed span {
+  margin: 0 5px;
+}
+.sosmed a {
+  text-decoration: none;
+}
+.copyright p {
+  padding-top: 10px;
 }
 
-footer p {
+/* ===================Icon=================== */
+.fa-bars {
+  font-size: 30px;
+}
+
+.fa-home {
+  font-size: 20px;
+}
+.fa-gripfire {
+  font-size: 20px;
+}
+.fa-comments {
+  font-size: 20px;
+}
+.fa-instagram-square {
+  font-size: 30px;
   color: #fff;
 }
-
-footer p a {
+.fa-facebook-square {
+  font-size: 30px;
   color: #fff;
 }
-
-.emote-love {
-  color: #ff0000;
+.fa-twitter-square {
+  font-size: 30px;
+  color: #fff;
 }
-
-/* =====================================Responsive Breakpoint================================= */
-/* Responsive CSS */
-@media (min-width: 320px) and (max-width: 767px) {
-  /* Navbar */
-  .nav-logo {
-    margin-right: 50%;
-  }
-  .navbar ul li a {
-    display: none;
-  }
-  .navbar div.icon-bars {
-    display: block;
-    position: absolute;
-    padding: 15px;
-    right: 0;
-    top: 0;
-  }
-
-  .profile-info {
-    font-size: 28px;
-  }
-
-  .jumbotron p {
-    font-size: 16px;
-  }
-
-  /* Project */
-  .content-items {
-    float: none;
-    width: 100%;
-  }
-  .myproject {
-    margin: 0;
-  }
-
-  /* Feedback */
-  .feedback {
-    padding: 0;
-  }
-
-  .input-area {
-    padding: 0 0 0 10px;
-  }
-
-  .form-input {
-    width: 90%;
-  }
-
-  .btn-kirim {
-    padding: 12px;
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
-  .alert {
-    width: 95%;
-    height: 40px;
-    margin-bottom: 10px;
-  }
-  .alert-error {
-    width: 95%;
-    height: 40px;
-    margin-bottom: 10px;
-  }
-}
-
-/* Breakpoint Responsive */
-@media (min-width: 320px) and (max-width: 767px) {
-  .nav-logo {
-    float: none;
-  }
-  ul.menu-show li a {
-    float: none;
-    display: inline-block;
-    width: 100%;
-    position: relative;
-  }
-  ul.menu-show li div.icon-bars {
-    transition: all 1s;
-    padding: 15px;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-}
-
-@media (max-width: 1024px) and (min-width: 768px) {
-  .nav-logo {
-    margin-right: 40%;
-  }
+.fa-whatsapp-square {
+  font-size: 30px;
+  color: #faeaff;
 }

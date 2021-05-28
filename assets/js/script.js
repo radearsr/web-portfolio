@@ -1,17 +1,19 @@
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbwMYDkbYISft1sUe0SHXZEoPGY_n77ZXNUc4enEjUkMma6DRjWr1cywCbTGU2HYlfhJGw/exec";
-const nav = document.querySelector(".navbar ul");
+const nav = document.querySelector(".navbar");
 const btn = document.querySelector(".icon-bars");
 const form = document.forms["form-feedback"];
-const alertSuccess = document.querySelector(".alert");
+const alertSuccess = document.querySelector(".alert-success");
 const alertError = document.querySelector(".alert-error");
 const btnKirim = document.querySelector(".btn-kirim");
 const btnLoading = document.querySelector(".btn-loading");
 
+// Bar Menu Saat Tampilan Mobile
 btn.addEventListener("click", () => {
   nav.classList.toggle("menu-show");
 });
 
+// Input Data Ke Google Spereadsheet
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 

@@ -99,6 +99,17 @@ function fetch_data($query){
 
 }
 
+function searching($keyword){
+    $query = "SELECT data_project.*, link_download.*
+            FROM data_project
+            JOIN link_download
+            ON data_project.id_link_download = link_download.id_download
+            WHERE data_project.judul LIKE '%$keyword%' OR
+            data_project.deskripsi LIKE '%$keyword%'
+    ";
 
+   return fetch_data($query);
+
+}
 
 ?>
